@@ -1,0 +1,16 @@
+.s04_h1_font01 {
+    color: var(--mycolor23);
+}
+
+.s04_p_font01 {
+    font-size: 24px;
+    color: var(--mycolor23);
+}
+
+.s04_p_font02 {
+    font-size: 16px;
+}
+
+.s04_hr {
+    border: 1px solid;
+}
