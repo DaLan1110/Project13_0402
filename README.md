@@ -3,8 +3,11 @@
 
 > 可提供 1~3 張圖片，讓觀看者透過 README 了解整體畫面
 
+![首頁展示]
 <img src="https://github.com/DaLan1110/Project13_0402/assets/165737379/42b3b8f7-a532-4f98-8dd2-a4b4752a3e69" alt="008" width="1000" height="800">
-![範例圖片 2](https://fakeimg.pl/500/)
+![後臺展示]
+<img src="https://github.com/DaLan1110/Project13_0402/assets/165737379/e92e7642-4a8e-494d-a431-7c1991997144" alt="008" width="500" height="400">
+
 ![範例圖片 3](https://fakeimg.pl/500/)
 
 ## 使用簡介
