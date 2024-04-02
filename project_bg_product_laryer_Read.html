@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>後台-商品</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="./css/bg/adminlte.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="./css/bg/all.min.css">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="./css/bg/OverlayScrollbars.min.css">
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/myall.css">
+    <style>
+        .site_card {
+            background-color: var(--mycolor23_1);
+        }
+
+        .border_css {
+            margin-top: 0px;
+        }
+    </style>
+</head>
+
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand bg-dark">
+            <!-- 上方左邊icon Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="#" class="nav-link text-white"><i
+                            class="nav-icon fa-solid fa-house fa-th px-2"></i>後台管理</a>
+                </li>
+
+            </ul>
+            <ul class="navbar-nav ml-auto mr-4">
+                <li class="nav-item d-none d-sm-inline-block px-3">
+                    <span class="nav-link text-white">管理者</span>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <button class="btn btn-outline-light">登出</button>
+                </li>
+            </ul>
+
+        </nav>
+        <!-- /.navbar -->
+
+        <!-- 左側選單 Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-white-primary">
+            <!-- 左側選單 左上角Logo Brand Logo -->
+            <div class="brand-link bg-dark border-dark text-center">
+                <a href="../../2024/project13/project_index.html" style="text-decoration: none;"><span class="brand-text fw-800">Logo早餐店</span></a>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+
+                <!-- 左側選單內容 Sidebar Menu -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                        data-accordion="false">
+                        <!-- 首頁 -->
+                        <li class="nav-item">
+                            <a href="../../2024/project13/project_bg_index.html" class="nav-link">
+                                <i class="nav-icon fa-solid fa-house fa-th"></i>
+                                <p>
+                                    首頁
+                                </p>
+                            </a>
+                        </li>
+                        <!-- 會員管理 -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fa-solid fa-user-group"></i>
+                                <p>
+                                    會員管理
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview border-top border-bottom">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="nav-icon fa-solid fa-users-gear"></i>
+                                        <p>管理者</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="../../2024/project13/project_bg_member_Read.html" class="nav-link">
+                                        <i class="nav-icon fa-solid fa-users"></i>
+                                        <p>會員</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 內容 -->
+                        <li class="nav-item menu-open">
+                            <a href="#" class="nav-link bg-dark">
+                                <i class="nav-icon fa-solid fa-note-sticky"></i>
+                                <p>
+                                    內容
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview border-top border-bottom">
+                                <li class="nav-item ">
+                                    <a href="#" class="nav-link">
+                                        <i class="nav-icon fa-solid fa-cart-shopping"></i>
+                                        <p>訂單紀錄</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="nav-icon fa-solid fa-clock-rotate-left"></i>
+                                        <p>預約紀錄</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link bg-secondary">
+                                        <i class="nav-icon fa-solid fa-store"></i>
+                                        <p>商品</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="nav-icon fa-solid fa-image"></i>
+                                        <p>媒體</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 設定 -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fa-solid fa-gear"></i>
+                                <p>
+                                    系統設定
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- 內容主題及右側首頁及主題 Content Header (Page header) -->
+            <section class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1><i class="nav-icon fa-solid fa-users me-1"></i>商品-管理</h1>
+                        </div>
+                    </div>
+                </div><!-- /.container-fluid -->
+            </section>
+
+            <!-- 主要內容Main content -->
+            <section class="content px-5">
+                <div class="container-fluid">
+                    <!-- 功能介面 -->
+                    <div class="card text-center">
+                        <div class="card-header">
+                            <ul class="nav nav-tabs card-header-tabs">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="../../2024/project13/project_bg_product_laryer_Read.html">產品分類</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-secondary" href="../../2024/project13/project_bg_product_Read.html">產品</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-secondary" href="../../2024/project13/project_bg_product_add_Read.html">加料區</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-body">
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-11 text-start py-3">
+                                    <button class="btn btn-outline-dark" id="add_btn" data-bs-toggle="modal"
+                                        data-bs-target="#AddModal">新增</button>
+                                    <button class="btn btn-outline-dark" id="delete_btn">刪除</button>
+                                </div>
+                            </div>
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-11">
+                                    <table
+                                        class="table table-bordered table-striped table-hover table-sm border text-center">
+                                        <thead>
+                                            <tr>
+                                                <th>產品分類</th>
+                                                <th>修改時間</th>
+                                                <th>建檔時間</th>
+                                                <th>修改</th>
+                                                <th>
+                                                    <div class="form-check form-check-inline">
+                                                        <input type="checkbox" class="mt-1 form-check-input"
+                                                            name="delete_choose01" id="delete_choose01">
+                                                        <label for="delete_choose01" class="form-check-label">全選</label>
+                                                    </div>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="mydata">
+                                            <tr>
+                                                <td style="vertical-align: middle;">蛋餅</td>
+                                                <td style="vertical-align: middle;">
+                                                    <p class="my-0">2024/03/14</p>
+                                                    <p class="my-0">18:20</p>
+                                                </td>
+                                                <td style="vertical-align: middle;">
+                                                    <p class="my-0">2024/03/14</p>
+                                                    <p class="my-0">18:20</p>
+                                                </td>
+                                                <td style="vertical-align: middle;">
+                                                    <button class="btn btn-outline-dark" id="update_btn"
+                                                        data-bs-toggle="modal" data-bs-target="#UpdateModal">修改</button>
+                                                </td>
+                                                <td style="vertical-align: middle;">
+                                                    <div class="form-check form-check-inline">
+                                                        <input type="checkbox" class="mt-1 ms-auto form-check-input"
+                                                            name="delete_choose" id="delete_choose02" data-id="xx">
+                                                        <label for="delete_choose02" class="form-check-label"></label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /.container-fluid -->
+            </section>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+
+        <footer class="main-footer">
+            <div class="float-right d-none d-sm-block">
+                <b>雲端</b> 2期
+            </div>
+            <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights
+            reserved.
+        </footer>
+
+        <!-- section01 MemberUpdateModal 新增產品類別 -->
+        <div class="modal fade" id="AddModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header text-bg-dark">
+                        <h1 class="modal-title fs-5 text-center" id="exampleModalLabel">新增產品類別</h1>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="timeline-section02">
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-10 mb-4">
+                                    <div class="mb-2">
+                                        <label for="add_layer_name" class="form-label">產品類別 :</label>
+                                        <input type="text" class="form-control" placeholder="" id="add_layer_name"
+                                            name="add_layer_name">
+                                        <div class="valid-feedback" id="add_layer_ok">產品類別不存在，可以使用</div>
+                                        <div class="invalid-feedback add_layer_no" id="add_layer_no">產品類別已存在，不可以使用</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                            <button type="button" class="btn btn-outline-dark" id="modal_add_btn">新增</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- section02 MemberUpdateModal 編輯產品類別 -->
+        <div class="modal fade" id="UpdateModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header text-bg-dark">
+                        <h1 class="modal-title fs-5 text-center" id="exampleModalLabel">修改產品類別</h1>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="timeline-section02">
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-10 mb-4">
+                                    <div class="mb-2">
+                                        <label for="update_layer_name" class="form-label">產品類別 :</label>
+                                        <input type="text" class="form-control" placeholder="" id="update_layer_name"
+                                            name="update_layer_name">
+                                        <div class="valid-feedback" id="update_layer_ok">產品類別不存在，可以使用</div>
+                                        <div class="invalid-feedback update_layer_no" id="update_layer_no">產品類別已存在，不可以使用
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                            <button type="button" class="btn btn-outline-dark" id="modal_update_btn"
+                                data-id="xx">修改</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- jQuery -->
+        <script src="./js/jquery-3.7.1.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="./js/bootstrap.bundle.min.js"></script>
+        <!-- 隱藏選單 AdminLTE App -->
+        <script src="./js/bg/adminlte.min.js"></script>
+        <!-- fullCalendar 2.2.5 -->
+        <script src="./js/bg/moment.min.js"></script>
+        <script src="./js/bg/main.js"></script>
+        <!-- chart.js -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <!-- sweetalert2 -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+        <script>
+
+            var flag_add_layer = false;
+            var flag_update_layer = true;
+            var u_id;
+            // 首頁
+            $(function () {
+
+                /* initialize the external events
+                 -----------------------------------------------------------------*/
+                function ini_events(ele) {
+                    ele.each(function () {
+
+                        // create an Event Object (https://fullcalendar.io/docs/event-object)
+                        // it doesn't need to have a start or end
+                        var eventObject = {
+                            title: $.trim($(this).text()) // use the element's text as the event title
+                        }
+
+                        // store the Event Object in the DOM element so we can get to it later
+                        $(this).data('eventObject', eventObject)
+
+                        // make the event draggable using jQuery UI
+                        $(this).draggable({
+                            zIndex: 1070,
+                            revert: true, // will cause the event to go back to its
+                            revertDuration: 0  //  original position after the drag
+                        })
+
+                    })
+                }
+
+                ini_events($('#external-events div.external-event'))
+
+                /* initialize the calendar
+                 -----------------------------------------------------------------*/
+                //Date for the calendar events (dummy data)
+                var date = new Date()
+                var d = date.getDate(),
+                    m = date.getMonth(),
+                    y = date.getFullYear()
+
+                var Calendar = FullCalendar.Calendar;
+                var Draggable = FullCalendar.Draggable;
+
+                var containerEl = document.getElementById('external-events');
+                var checkbox = document.getElementById('drop-remove');
+                var calendarEl = document.getElementById('calendar');
+
+                // initialize the external events
+                // -----------------------------------------------------------------
+
+                new Draggable(containerEl, {
+                    itemSelector: '.external-event',
+                    eventData: function (eventEl) {
+                        return {
+                            title: eventEl.innerText,
+                            backgroundColor: window.getComputedStyle(eventEl, null).getPropertyValue('background-color'),
+                            borderColor: window.getComputedStyle(eventEl, null).getPropertyValue('background-color'),
+                            textColor: window.getComputedStyle(eventEl, null).getPropertyValue('color'),
+                        };
+                    }
+                });
+
+                var calendar = new Calendar(calendarEl, {
+                    headerToolbar: {
+                        left: 'prev,next today',
+                        center: 'title',
+                        right: 'dayGridMonth,timeGridWeek,timeGridDay'
+                    },
+                    themeSystem: 'bootstrap',
+                    //Random default events
+                    events: [
+                        {
+                            title: 'All Day Event',
+                            start: new Date(y, m, 1),
+                            backgroundColor: '#f56954', //red
+                            borderColor: '#f56954', //red
+                            allDay: true
+                        },
+                        {
+                            title: 'Long Event',
+                            start: new Date(y, m, d - 5),
+                            end: new Date(y, m, d - 2),
+                            backgroundColor: '#f39c12', //yellow
+                            borderColor: '#f39c12' //yellow
+                        },
+                        {
+                            title: 'Meeting',
+                            start: new Date(y, m, d, 10, 30),
+                            allDay: false,
+                            backgroundColor: '#0073b7', //Blue
+                            borderColor: '#0073b7' //Blue
+                        },
+                        {
+                            title: 'Lunch',
+                            start: new Date(y, m, d, 12, 0),
+                            end: new Date(y, m, d, 14, 0),
+                            allDay: false,
+                            backgroundColor: '#00c0ef', //Info (aqua)
+                            borderColor: '#00c0ef' //Info (aqua)
+                        },
+                        {
+                            title: 'Birthday Party',
+                            start: new Date(y, m, d + 1, 19, 0),
+                            end: new Date(y, m, d + 1, 22, 30),
+                            allDay: false,
+                            backgroundColor: '#00a65a', //Success (green)
+                            borderColor: '#00a65a' //Success (green)
+                        },
+                        {
+                            title: 'Click for Google',
+                            start: new Date(y, m, 28),
+                            end: new Date(y, m, 29),
+                            url: 'https://www.google.com/',
+                            backgroundColor: '#3c8dbc', //Primary (light-blue)
+                            borderColor: '#3c8dbc' //Primary (light-blue)
+                        }
+                    ],
+                    editable: true,
+                    droppable: true, // this allows things to be dropped onto the calendar !!!
+                    drop: function (info) {
+                        // is the "remove after drop" checkbox checked?
+                        if (checkbox.checked) {
+                            // if so, remove the element from the "Draggable Events" list
+                            info.draggedEl.parentNode.removeChild(info.draggedEl);
+                        }
+                    }
+                });
+
+                calendar.render();
+                // $('#calendar').fullCalendar()
+
+                /* ADDING EVENTS */
+                var currColor = '#3c8dbc' //Red by default
+                // Color chooser button
+                $('#color-chooser > li > a').click(function (e) {
+                    e.preventDefault()
+                    // Save color
+                    currColor = $(this).css('color')
+                    // Add color effect to button
+                    $('#add-new-event').css({
+                        'background-color': currColor,
+                        'border-color': currColor
+                    })
+                })
+                $('#add-new-event').click(function (e) {
+                    e.preventDefault()
+                    // Get value and make sure it is not null
+                    var val = $('#new-event').val()
+                    if (val.length == 0) {
+                        return
+                    }
+
+                    // Create events
+                    var event = $('<div />')
+                    event.css({
+                        'background-color': currColor,
+                        'border-color': currColor,
+                        'color': '#fff'
+                    }).addClass('external-event')
+                    event.text(val)
+                    $('#external-events').prepend(event)
+
+                    // Add draggable funtionality
+                    ini_events(event)
+
+                    // Remove event from text input
+                    $('#new-event').val('')
+                })
+            });
+
+
+            $(function () {
+                // 產品類別資料讀取
+                $.ajax({
+                    type: "GET",
+                    url: "../../2024/project13/project_bg_product_laryer_Read_api.php",
+                    dataType: "json",
+                    async: false,
+                    success: showdata,
+                    error: function () {
+                        alert("Error-../../2024/project13/project_bg_product_laryer_Read_api.php");
+                    }
+                });
+
+                // 修改產品類別資料
+                $("body").on("click", "#mydata #update_btn", function () {
+                    console.log("update_btn_ok");
+                    console.log($(this).data("id"));
+                    console.log($(this).data("layername"));
+
+                    u_id = $(this).data("id");
+                    $("#update_layer_name").val($(this).data("layername"));
+                });
+
+                // 檢查修改類別名稱是否重複
+                $("#update_layer_name").bind("input propertychange", function () {
+                    console.log($(this).val().length);
+                    if ($(this).val().length > 0) {
+                        // 字數符合規定，傳遞至後端檢查帳號是否存在
+                        var dataJSON = {};
+                        dataJSON["Layer_Name"] = $("#update_layer_name").val();
+                        console.log(JSON.stringify(dataJSON));
+
+                        // 取得後端資料執行檢查
+                        $.ajax({
+                            type: "POST",
+                            url: "../../2024/project13/project_CheckLayer_Name_api.php",
+                            data: JSON.stringify(dataJSON),
+                            dataType: "json",
+                            success: showdata_CheckLayer_update,
+                            error: function () {
+                                alert("Error-../../2024/project13/project_CheckLayer_Name_api.php");
+                            }
+
+                        });
+                    } else {
+                        // 字數不符合規定
+                        $(this).removeClass("is-valid");
+                        $(this).removeClass("is-invalid");
+                        $(this).addClass("is-invalid");
+                        $(".update_layer_no").text("欄位不得空白");
+                        flag_update_layer = false;
+                    }
+                });
+
+                // modal更新產品類別資料
+                $("#modal_update_btn").click(function () {
+                    if (flag_update_layer == true) {
+
+                        // 產生json格式的參數
+                        var dataJSON = {};
+                        dataJSON["ID"] = u_id;
+                        dataJSON["Layer_Name"] = $("#update_layer_name").val();
+
+
+                        console.log(JSON.stringify(dataJSON));
+
+                        // 傳遞更新參數至後端api
+                        $.ajax({
+                            type: "POST",
+                            url: "../../2024/project13/project_bg_product_laryer_Update.php",
+                            data: JSON.stringify(dataJSON),
+                            dataType: "json",
+                            success: showdata_update,
+                            error: function () {
+                                alert("Error-../../2024/project13/project_bg_product_laryer_Update.php");
+                            }
+                        });
+
+                    } else {
+                        alert("資料欄位填寫格式有誤!!");
+                    }
+                });
+
+            });
+
+            // 新增產品類別
+            $(function () {
+                $("#add_layer_name").bind("input propertychange", function () {
+                    console.log($(this).val().length);
+                    if ($(this).val().length > 0) {
+                        // 字數符合規定，傳遞至後端檢查帳號是否存在
+                        var dataJSON = {};
+                        dataJSON["Layer_Name"] = $("#add_layer_name").val();
+                        console.log(JSON.stringify(dataJSON));
+
+                        // 取得後端資料執行檢查
+                        $.ajax({
+                            type: "POST",
+                            url: "../../2024/project13/project_CheckLayer_Name_api.php",
+                            data: JSON.stringify(dataJSON),
+                            dataType: "json",
+                            success: showdata_CheckLayer_add,
+                            error: function () {
+                                alert("Error-../../2024/project13/project_CheckLayer_Name_api.php");
+                            }
+
+                        });
+                    } else {
+                        // 字數不符合規定
+                        $(this).removeClass("is-valid");
+                        $(this).removeClass("is-invalid");
+                        $(this).addClass("is-invalid");
+                        $(".add_layer_no").text("欄位不得空白");
+                        flag_add_layer = false;
+                    }
+                });
+
+                $('#modal_add_btn').click(function () {
+                    // console.log($("#add_layer_name").val());
+                    if (flag_add_layer) {
+                        var dataJSON = {};
+                        dataJSON["Layer_Name"] = $("#add_layer_name").val();
+                        console.log(JSON.stringify(dataJSON));
+
+                        // 傳遞置後端
+                        $.ajax({
+                            type: "POST",
+                            url: "../../2024/project13/project_bg_product_layer_Create_api.php",
+                            data: JSON.stringify(dataJSON),
+                            contentType: "application/json;charset=utf-8",
+                            dataType: "json",
+                            success: showdata_add,
+                            error: function () {
+                                alert("error-../../2024/project13/project_bg_product_layer_Create_api.php");
+                            }
+                        });
+                    } else {
+                        alert("欄位有誤，請修正!!");
+                    }
+                });
+            });
+
+            // 刪除商品類別資料
+            $(function () {
+                // 單選取查ID
+                $("#mydata #delete_choose02").change(function () {
+                    console.log($(this).data("id"));
+                })
+
+                // 全部選取
+                $("#delete_choose01").change(function () {
+                    // 獲取全選複選框的狀態
+                    var isChecked = $(this).prop("checked");
+
+                    // 將所有其他複選框的狀態設置為與全選複選框相同
+                    $("input[name='delete_choose']").prop("checked", isChecked);
+                });
+
+                $("body").on("click", "#delete_btn", function () {
+
+                    var chkArray = [];
+                    $.each($("input[name='delete_choose']:checked"), function () {
+                        console.log($(this).data("id"));
+                        chkArray.push($(this).data("id"));
+                    });
+                    console.log(chkArray);
+                    if (confirm("確定要刪除商品類別資料嗎？")) {
+                        var dataJSON = {};
+                        dataJSON["ID"] = chkArray.join(", ");
+                        console.log(JSON.stringify(dataJSON));
+                        // 傳遞至後端
+                        $.ajax({
+                            type: "POST",
+                            url: "../../2024/project13/project_bg_product_layer_Delete_api.php",
+                            data: JSON.stringify(dataJSON),
+                            dataType: "json",
+                            success: showdata_delete,
+                            error: function () {
+                                alert("Error-../../2024/project13/project_bg_product_layer_Delete_api.php");
+                            }
+                        });
+                    }
+                });
+            });
+
+            // 新增檢查產品類別名稱 是否重複
+            function showdata_CheckLayer_add(data) {
+                console.log(data);
+                if (data.state) {
+                    // 產品類別名稱不存在，可以使用
+                    $("#add_layer_name").removeClass("is-invalid");
+                    $("#add_layer_name").removeClass("is-valid");
+                    $("#add_layer_name").addClass("is-valid");
+                    flag_add_layer = true;
+                }
+                else {
+                    // 產品類別名稱已存在，不可以使用
+                    $("#add_layer_name").removeClass("is-valid");
+                    $("#add_layer_name").removeClass("is-invalid");
+                    $("#add_layer_name").addClass("is-invalid");
+                    $(".add_layer_no").text("產品類別名稱已存在，不可以使用!");
+                    flag_add_layer = false;
+                }
+            }
+
+            // 修改檢查產品類別名稱 是否重複
+            function showdata_CheckLayer_update(data) {
+                console.log(data);
+                if (data.state) {
+                    // 產品類別名稱不存在，可以使用
+                    $("#update_layer_name").removeClass("is-invalid");
+                    $("#update_layer_name").removeClass("is-valid");
+                    $("#update_layer_name").addClass("is-valid");
+                    flag_update_layer = true;
+                }
+                else {
+                    // 產品類別名稱已存在，不可以使用
+                    $("#update_layer_name").removeClass("is-valid");
+                    $("#update_layer_name").removeClass("is-invalid");
+                    $("#update_layer_name").addClass("is-invalid");
+                    $(".update_layer_no").text("產品類別名稱已存在，不可以使用!");
+                    flag_update_layer = false;
+                }
+            }
+
+            // 新增產品類別
+            function showdata_add(data) {
+                console.log(data);
+                if (data.state) {
+                    alert(data.message);
+                    location.href = "../../2024/project13/project_bg_product_laryer_Read.html";
+                } else {
+                    alert(data.message);
+                }
+            }
+
+            // 讀取商品分類資料
+            function showdata(data) {
+                console.log(data);
+                console.log(data.data);
+                $("#mydata").empty();
+                data.data.forEach(function (item) {
+                    var strHTML =
+                        '<tr>' +
+                        '<td style="vertical-align: middle;">' + item.Layer_Name + '</td>' +
+                        '<td style="vertical-align: middle;">' +
+                        '<p class="my-0">' + item.Update_at + '</p>' +
+                        '</td>' +
+                        '<td style="vertical-align: middle;">' +
+                        '<p class="my-0">' + item.Created_at + '</p>' +
+                        '</td>' +
+                        '<td style="vertical-align: middle;">' +
+                        '<button class="btn btn-outline-dark" id="update_btn" data-bs-toggle="modal" data-bs-target="#UpdateModal" data-id="' + item.ID + '" data-layername="' + item.Layer_Name + '">修改</button>' +
+                        '</td>' +
+                        '<td style="vertical-align: middle;">' +
+                        '<div class="form-check form-check-inline">' +
+                        '<input type="checkbox" class="mt-1 ms-auto form-check-input" name="delete_choose" id="delete_choose02" data-id="' + item.ID + '">' +
+                        '<label for="delete_choose02" class="form-check-label"></label>' +
+                        '</div>' +
+                        '</td>' +
+                        '</tr>';
+
+                    $("#mydata").append(strHTML);
+                });
+            }
+
+            // 更新商品類別資料
+            function showdata_update(data) {
+                console.log(data);
+                if (data.state) {
+                    alert(data.message);
+                    location.href = "../../2024/project13/project_bg_product_laryer_Read.html";
+                } else {
+                    alert(data.message);
+                    console.log(data);
+                }
+            }
+
+            // 刪除商品資料
+            function showdata_delete(data) {
+                console.log(data);
+                if (data.state) {
+                    alert(data.message);
+                    location.href = "../../2024/project13/project_bg_product_laryer_Read.html";
+                } else {
+                    alert(data.message);
+                }
+            }
+
+        </script>
+</body>
+
+</html>
