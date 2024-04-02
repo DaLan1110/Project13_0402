@@ -1,14 +1,10 @@
 
 ## 畫面
 
-> 可提供 1~3 張圖片，讓觀看者透過 README 了解整體畫面
-
-<p>首頁展示</p>
+> <p>首頁展示</p>
 <img src="https://github.com/DaLan1110/Project13_0402/assets/165737379/42b3b8f7-a532-4f98-8dd2-a4b4752a3e69" alt="008" width="1000" height="800">
 
-
-
-<p>後臺展示</p>
+> <p>後臺展示</p>
 <img src="https://github.com/DaLan1110/Project13_0402/assets/165737379/e92e7642-4a8e-494d-a431-7c1991997144" alt="008" width="400" height="300">
 <img src="https://github.com/DaLan1110/Project13_0402/assets/165737379/41b9aadc-3475-4ca1-8873-47dcd078c4b1" alt="008" width="400" height="300">
 
