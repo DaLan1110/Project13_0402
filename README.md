@@ -10,10 +10,6 @@
 
 <p>後臺展示</p>
 <img src="https://github.com/DaLan1110/Project13_0402/assets/165737379/e92e7642-4a8e-494d-a431-7c1991997144" alt="008" width="400" height="300">
-
-
-
-<p>後臺展示</p>
 <img src="https://github.com/DaLan1110/Project13_0402/assets/165737379/41b9aadc-3475-4ca1-8873-47dcd078c4b1" alt="008" width="400" height="300">
 
 ## 使用簡介
