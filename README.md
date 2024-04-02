@@ -5,10 +5,9 @@
 <img src="https://github.com/DaLan1110/Project13_0402/assets/165737379/42b3b8f7-a532-4f98-8dd2-a4b4752a3e69" alt="008" width="1000" height="800">
 
 > <p>後臺展示</p>
-<img src="https://github.com/DaLan1110/Project13_0402/assets/165737379/e92e7642-4a8e-494d-a431-7c1991997144" alt="008" width="400" height="300">
+<img src="https://github.com/DaLan1110/Project13_0402/assets/165737379/e92e7642-4a8e-494d-a431-7c1991997144" alt="008" width="1000" height="800">
 <img src="https://github.com/DaLan1110/Project13_0402/assets/165737379/21c262d1-2d62-45e9-ac50-f07d71f73a2e" alt="008" width="400" height="300">
 <img src="https://github.com/DaLan1110/Project13_0402/assets/165737379/56dc7123-d3de-4f35-b70a-0efa2309e3d5" alt="008" width="400" height="300">
-![後臺會員02]()
 
 
 ## 使用簡介
