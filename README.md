@@ -3,7 +3,7 @@
 
 > 可提供 1~3 張圖片，讓觀看者透過 README 了解整體畫面
 
-![008](https://github.com/DaLan1110/Project13_0402/assets/165737379/42b3b8f7-a532-4f98-8dd2-a4b4752a3e69)
+<img src="https://github.com/DaLan1110/Project13_0402/assets/165737379/42b3b8f7-a532-4f98-8dd2-a4b4752a3e69" alt="008" width="200" height="200">
 ![範例圖片 2](https://fakeimg.pl/500/)
 ![範例圖片 3](https://fakeimg.pl/500/)
 
