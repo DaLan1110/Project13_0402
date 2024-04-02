@@ -10,35 +10,24 @@
 <img src="https://github.com/DaLan1110/Project13_0402/assets/165737379/59fa4f24-d520-43b8-ac8e-679e3f7243ca" alt="008" width="400" height="300">
 
 
+## 技術功能
+
+
+- Bootstrap v5.2.3
+- JQuery v3.7.1
+- AdminLTE v3.2.0
+- Chart.Js
+- Sweetalert2
+
+
 ## 使用簡介
-
-
-- Node.js v16.15.0
-
-- Vue v3.2.20
-- Vite v4.0.4
-- Vue Router v4.0.11
-- Axios v0.24.0
-- Bootstrap v5.1.3
-...
-
-
-## 功能簡介
 
 此專案有使用 Github Actions，所以發起 PR 時會自動執行以下動作：
 
-- 建立 Node.js 環境
-- 安裝相依套件
-- 編譯程式碼
-- 執行 ESLint 掃描
-- 執行測試
-...
-
-## 第三方服務
-
-- Algolia
-- Google Analytics
-...
+- 可註冊、編輯及修改會員
+- 後臺管控
+- 商品建檔、修改、刪除
+- 查看上架商品
 
 ## 聯絡作者
 
