@@ -1,0 +1,103 @@
+ /*css檔用link載入*/
+ body {
+     background-color: var(--mycolor02);
+     padding-top: 15px;
+ }
+
+ .wrapper {
+     width: 1024px;
+     margin-top: 0;
+     margin-bottom: 0;
+     margin-left: auto;
+     margin-right: auto;
+ }
+
+ nav {
+     background-color: var(--mycolor05);
+     text-align: center;
+ }
+
+ nav ul {
+     display: inline-block;
+ }
+
+ nav ul li {
+     list-style-type: none;
+     float: left;
+ }
+
+ nav ul li a {
+     display: block;
+     padding-top: 15px;
+     padding-bottom: 15px;
+     padding-left: 20px;
+     padding-right: 20px;
+     /* background-color: cadetblue; */
+     /* margin-right: 5px; */
+     text-decoration: none;
+     color: var(--mycolor03);
+ }
+
+ nav ul li a:hover {
+     background-color: var(--mycolor04);
+     color: var(--mycolor01);
+     font-weight: 800;
+ }
+
+ .content_in {
+     padding-top: 15px;
+     padding-bottom: 15px;
+     padding-left: 30px;
+     padding-right: 30px;
+     background-color: var(--mycolor03);
+     margin-top: 5px;
+ }
+
+ .content_in h1 {
+     color: var(--mycolor04);
+     text-align: center;
+ }
+
+ .content_in p {
+     font-size: 20px;
+     margin-bottom: 30px;
+ }
+
+ .content_in a {
+     display: block;
+     width: 130px;
+     height: 40px;
+     background-color: var(--mycolor02);
+     margin-top: 0;
+     margin-bottom: 0;
+     margin-left: auto;
+     margin-right: auto;
+     text-decoration: none;
+     color: var(--mycolor01);
+     text-align: center;
+     line-height: 40px;
+ }
+
+ .content_in a:hover {
+     background-color: var(--mycolor03);
+     color: var(--mycolor05);
+     font-weight: 800;
+ }
+
+ .footer {
+     background-color: var(--mycolor04);
+     text-align: center;
+ }
+
+ .footer p {
+     color: var(--mycolor02);
+     font-size: 20px;
+     padding-top: 5px;
+     padding-bottom: 5px;
+ }
+
+ @media screen and (max-width: 1024px) {
+     .wrapper {
+         width: 100%;
+     }
+ }

@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>後台-會員</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../../css/bg/adminlte.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../../css/bg/all.min.css">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="../../css/bg/OverlayScrollbars.min.css">
+
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/all.min.css">
+    <link rel="stylesheet" href="../../css/myall.css">
+    <style>
+        .site_card {
+            background-color: var(--mycolor23_1);
+        }
+
+        .border_css {
+            margin-top: 0px;
+        }
+    </style>
+</head>
+
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand bg-dark">
+            <!-- 上方左邊icon Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="#" class="nav-link text-white"><i
+                            class="nav-icon fa-solid fa-house fa-th px-2"></i>後台管理</a>
+                </li>
+
+            </ul>
+            <ul class="navbar-nav ml-auto mr-4">
+                <li class="nav-item d-none d-sm-inline-block px-3">
+                    <span class="nav-link text-white" id="user_message">管理者</span>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <button class="btn btn-outline-light" id="logout_btn">登出</button>
+                </li>
+            </ul>
+
+        </nav>
+        <!-- /.navbar -->
+
+        <!-- 左側選單 Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-white-primary">
+            <!-- 左側選單 左上角Logo Brand Logo -->
+            <div class="brand-link bg-dark border-dark text-center">
+                <a href="../../project_index.html" style="text-decoration: none;"><span class="brand-text fw-800">Logo早餐店</span></a>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+
+                <!-- 左側選單內容 Sidebar Menu -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                        data-accordion="false">
+                        <!-- 首頁 -->
+                        <li class="nav-item">
+                            <a href="../../web/back/project_bg_index.html" class="nav-link">
+                                <i class="nav-icon fa-solid fa-house fa-th"></i>
+                                <p>
+                                    首頁
+                                </p>
+                            </a>
+                        </li>
+                        <!-- 會員管理 -->
+                        <li class="nav-item menu-open">
+                            <a href="#" class="nav-link bg-dark">
+                                <i class="nav-icon fa-solid fa-user-group"></i>
+                                <p>
+                                    會員管理
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview border-top border-bottom">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="nav-icon fa-solid fa-users-gear"></i>
+                                        <p>管理者</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link bg-secondary">
+                                        <i class="nav-icon fa-solid fa-users"></i>
+                                        <p>會員</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 內容 -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fa-solid fa-note-sticky"></i>
+                                <p>
+                                    內容
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview border-top border-bottom">
+                                <li class="nav-item ">
+                                    <a href="#" class="nav-link">
+                                        <i class="nav-icon fa-solid fa-cart-shopping"></i>
+                                        <p>訂單紀錄</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="nav-icon fa-solid fa-clock-rotate-left"></i>
+                                        <p>預約紀錄</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="../../web/back/project_bg_product_laryer_Read.html"
+                                        class="nav-link">
+                                        <i class="nav-icon fa-solid fa-store"></i>
+                                        <p>商品</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="nav-icon fa-solid fa-image"></i>
+                                        <p>媒體</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 設定 -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fa-solid fa-gear"></i>
+                                <p>
+                                    系統設定
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- 內容主題及右側首頁及主題 Content Header (Page header) -->
+            <section class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1><i class="nav-icon fa-solid fa-users me-1"></i>會員-管理</h1>
+                        </div>
+                    </div>
+                </div><!-- /.container-fluid -->
+            </section>
+
+            <!-- 主要內容Main content -->
+            <section class="content px-5">
+                <div class="container-fluid">
+                    <div class="row">
+                        <!-- 功能介面 -->
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row d-flex justify-content-center">
+                                    <div class="col-11 text-start py-3">
+                                        <button class="btn btn-outline-dark" id="add_btn" data-bs-toggle="modal"
+                                            data-bs-target="#AddModal">新增</button>
+                                        <button class="btn btn-outline-dark" id="delete_btn">刪除</button>
+                                    </div>
+                                </div>
+
+                                <div class="row d-flex justify-content-center">
+                                    <div class="col-11">
+                                        <table
+                                            class="table table-bordered table-striped table-hover table-sm border text-center">
+                                            <thead>
+                                                <tr>
+                                                    <th>帳號</th>
+                                                    <th>姓名</th>
+                                                    <th>等級</th>
+                                                    <th>權限</th>
+                                                    <th>更新時間</th>
+                                                    <th>建檔時間</th>
+                                                    <th>修改</th>
+                                                    <th>
+                                                        <div class="form-check form-check-inline">
+                                                            <input type="checkbox" class="mt-1 form-check-input"
+                                                                name="delete_choose01" id="delete_choose01">
+                                                            <label for="delete_choose01"
+                                                                class="form-check-label">全選</label>
+                                                        </div>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="mydata">
+                                                <tr>
+                                                    <td style="vertical-align: middle;"><a href="#" id="update_pwd_btn"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target="#UpdatePwdModal">owner02</a></td>
+                                                    <td style="vertical-align: middle;">王曉明</td>
+                                                    <td style="vertical-align: middle;">一般會員</td>
+                                                    <td style="vertical-align: middle;">啟用</td>
+                                                    <td style="vertical-align: middle;">
+                                                        <p class="my-0">2024/03/14</p>
+                                                        <p class="my-0">18:20</p>
+                                                    </td>
+                                                    <td style="vertical-align: middle;">
+                                                        <p class="my-0">2024/03/14</p>
+                                                        <p class="my-0">18:20</p>
+                                                    </td>
+                                                    <td style="vertical-align: middle;">
+                                                        <button class="btn btn-outline-dark" id="update_btn"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target="#UpdateModal">修改</button>
+                                                    </td>
+                                                    <td style="vertical-align: middle;">
+                                                        <div class="form-check form-check-inline">
+                                                            <input type="checkbox" class="mt-1 ms-auto form-check-input"
+                                                                name="delete_choose" id="delete_choose02" data-id="xx">
+                                                            <label for="delete_choose02"
+                                                                class="form-check-label"></label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.row -->
+        </div><!-- /.container-fluid -->
+        </section>
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+
+    <footer class="main-footer">
+        <div class="float-right d-none d-sm-block">
+            <b>雲端</b> 2期
+        </div>
+        <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights
+        reserved.
+    </footer>
+
+    <!-- section01 MemberUpdateModal 新增會員 -->
+    <div class="modal fade" id="AddModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header text-bg-dark">
+                    <h1 class="modal-title fs-5 text-center" id="exampleModalLabel">新增會員</h1>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="timeline-section02">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="mb-2">
+                                    <label for="add_photo" class="form-label">大頭照 :</label>
+                                    <div class="mt-2 mb-4 d-flex justify-content-center align-items-center border border-1"
+                                        style="height: 110px;">
+                                        <i class="fa-solid fa-circle-user fa-6x"></i>
+                                    </div>
+                                    <input type="file" class="form-control mt-2" placeholder="" id="add_photo"
+                                        name="add_photo">
+                                    <div class="valid-feedback" id="add_photo_ok"></div>
+                                    <div class="invalid-feedback" id="add_photo_no"></div>
+                                </div>
+                                <div class="mb-2">
+                                    <label for="add_account" class="form-label">會員帳號 :</label>
+                                    <input type="text" class="form-control" placeholder="" id="add_account"
+                                        name="add_account">
+                                    <div class="valid-feedback" id="add_account_ok">帳號符合規定</div>
+                                    <div class="invalid-feedback" id="add_account_no">帳號不符合規定</div>
+                                </div>
+                                <div class="mb-2">
+                                    <label for="add_pwd" class="form-label">會員密碼 :</label>
+                                    <input type="password" class="form-control" placeholder="" id="add_pwd"
+                                        name="add_pwd">
+                                    <div class="valid-feedback">密碼符合規定</div>
+                                    <div class="invalid-feedback">密碼不符合規定</div>
+                                </div>
+                                <div class="mb-2">
+                                    <label for="add_re_pwd" class="form-label">輸入二次密碼 :</label>
+                                    <input type="password" class="form-control" placeholder="" id="add_re_pwd"
+                                        name="add_re_pwd">
+                                    <div class="valid-feedback">密碼一致</div>
+                                    <div class="invalid-feedback">密碼不一致</div>
+                                </div>
+                                <div class="mb-2">
+                                    <label for="add_level" class="form-label">會員等級 :</label>
+                                    <select name="add_level" id="add_level" class="form-select">
+                                        <option selected disabled>---選擇會員等級---</option>
+                                        <option value="VIP會員">VIP會員</option>
+                                        <option value="一般會員">一般會員</option>
+                                    </select>
+                                </div>
+                                <div class="mb-2">
+                                    <div>
+                                        <label for="add_pm" class="form-label">會員權限 :</label>
+                                    </div>
+                                    <div class="form-check form-switch">
+                                        <input type="checkbox" class="form-check-input" name="add_pm" id="add_pm"
+                                            checked>
+                                        <label for="add_pm" class="form-check-label" id="add_pm_text">啟用</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="mb-2">
+                                    <label for="add_username" class="form-label">會員姓名 :</label>
+                                    <input type="text" class="form-control" placeholder="" id="add_username"
+                                        name="add_username">
+                                    <div class="valid-feedback">名稱可以使用</div>
+                                    <div class="invalid-feedback">名稱在2-10個字</div>
+                                </div>
+                                <div class="mb-2">
+                                    <label for="add_nickname" class="form-label">會員暱稱 :</label>
+                                    <input type="text" class="form-control" placeholder="" id="add_nickname"
+                                        name="add_nickname">
+                                    <div class="valid-feedback">暱稱可以使用</div>
+                                    <div class="invalid-feedback">暱稱在2-15個字</div>
+                                </div>
+                                <div class="mb-2">
+                                    <label for="add_gender" class="form-label">會員性別 :</label>
+                                    <div></div>
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" class="form-check-input" name="rad_add" id="radio_add_male"
+                                            value="男性" checked>
+                                        <label for="radio_add_male" class="form-check-label">男性</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" class="form-check-input" name="rad_add"
+                                            id="radio_add_female" value="女性">
+                                        <label for="radio_add_female" class="form-check-label">女性</label>
+                                    </div>
+                                </div>
+                                <div class="mb-2">
+                                    <label for="add_mobile" class="form-label">連絡電話 :</label>
+                                    <input type="text" class="form-control" placeholder="" id="add_mobile"
+                                        name="add_mobile">
+                                    <div class="valid-feedback">字數符合</div>
+                                    <div class="invalid-feedback">低於或超過10個字</div>
+                                </div>
+                                <div class="mb-2">
+                                    <label for="add_email" class="form-label">電子郵件 :</label>
+                                    <input type="text" class="form-control" placeholder="" id="add_email"
+                                        name="add_email">
+                                    <div class="valid-feedback">符合</div>
+                                    <div class="invalid-feedback">不符合</div>
+                                </div>
+                                <div class="mb-2">
+                                    <label for="add_birthday" class="form-label">生日 :</label>
+                                    <input type="date" class="form-control" placeholder="" id="add_birthday"
+                                        name="add_birthday">
+                                    <div class="valid-feedback"></div>
+                                    <div class="invalid-feedback"></div>
+                                </div>
+                                <div class="mb-2">
+                                    <label for="add_address" class="form-label">地址 :</label>
+                                    <input type="text" class="form-control" placeholder="" id="add_address"
+                                        name="add_address">
+                                    <div class="valid-feedback"></div>
+                                    <div class="invalid-feedback"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-outline-dark" id="modal_add_btn">新增</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- section02 MemberUpdateModal 編輯會員 -->
+    <div class="modal fade" id="UpdateModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header text-bg-dark">
+                    <h1 class="modal-title fs-5 text-center" id="exampleModalLabel">編輯會員</h1>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="timeline-section02">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="mb-2">
+                                    <label for="update_photo" class="form-label">大頭照 :</label>
+                                    <div class="mt-2 mb-4 d-flex justify-content-center align-items-center border border-1"
+                                        style="height: 200px;">
+                                        <i class="fa-solid fa-circle-user fa-10x"></i>
+                                    </div>
+                                    <input type="file" class="form-control mt-2" placeholder="" id="update_photo"
+                                        name="update_photo">
+                                    <div class="valid-feedback" id="update_photo_ok"></div>
+                                    <div class="invalid-feedback" id="update_photo_no"></div>
+                                </div>
+                                <div class="mb-2">
+                                    <label for="update_account" class="form-label">會員帳號 :</label>
+                                    <input type="text" class="form-control" placeholder="" id="update_account"
+                                        name="update_account" disabled>
+                                </div>
+                                <div class="mb-2">
+                                    <label for="update_level" class="form-label">會員等級 :</label>
+                                    <select name="update_level" id="update_level" class="form-select">
+                                        <option value="VIP會員">VIP會員</option>
+                                        <option value="一般會員">一般會員</option>
+                                    </select>
+                                </div>
+                                <div class="mb-2">
+                                    <div>
+                                        <label for="update_pm" class="form-label">會員權限 :</label>
+                                    </div>
+                                    <div class="form-check form-switch">
+                                        <input type="checkbox" class="form-check-input" name="update_pm" id="update_pm">
+                                        <label for="update_pm" class="form-check-label" id="update_pm_text">停權</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="mb-2">
+                                    <label for="update_username" class="form-label">會員姓名 :</label>
+                                    <input type="text" class="form-control" placeholder="" id="update_username"
+                                        name="update_username">
+                                    <div class="valid-feedback">名稱可以使用</div>
+                                    <div class="invalid-feedback">名稱在2-10個字</div>
+                                </div>
+                                <div class="mb-2">
+                                    <label for="update_nickname" class="form-label">會員暱稱 :</label>
+                                    <input type="text" class="form-control" placeholder="" id="update_nickname"
+                                        name="update_nickname">
+                                    <div class="valid-feedback">暱稱可以使用</div>
+                                    <div class="invalid-feedback">暱稱在2-15個字</div>
+                                </div>
+                                <div class="mb-2">
+                                    <label for="update_gender" class="form-label">會員性別</label>
+                                    <div></div>
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" class="form-check-input" name="rad" id="radio_male"
+                                            value="男性" checked>
+                                        <label for="radio_male" class="form-check-label">男性</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" class="form-check-input" name="rad" id="radio_female"
+                                            value="女性">
+                                        <label for="radio_female" class="form-check-label">女性</label>
+                                    </div>
+                                </div>
+                                <div class="mb-2">
+                                    <label for="update_mobile" class="form-label">連絡電話 :</label>
+                                    <input type="text" class="form-control" placeholder="" id="update_mobile"
+                                        name="update_mobile">
+                                    <div class="valid-feedback">字數符合</div>
+                                    <div class="invalid-feedback">低於或超過10個字</div>
+                                </div>
+                                <div class="mb-2">
+                                    <label for="update_email" class="form-label">電子郵件 :</label>
+                                    <input type="text" class="form-control" placeholder="" id="update_email"
+                                        name="update_email">
+                                    <div class="valid-feedback">符合</div>
+                                    <div class="invalid-feedback">不符合</div>
+                                </div>
+                                <div class="mb-2">
+                                    <label for="update_birthday" class="form-label">生日 :</label>
+                                    <input type="text" class="form-control" placeholder="" id="update_birthday"
+                                        name="update_birthday">
+                                    <div class="valid-feedback"></div>
+                                    <div class="invalid-feedback"></div>
+                                </div>
+                                <div class="mb-2">
+                                    <label for="update_address" class="form-label">地址 :</label>
+                                    <input type="text" class="form-control" placeholder="" id="update_address"
+                                        name="update_address">
+                                    <div class="valid-feedback"></div>
+                                    <div class="invalid-feedback"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-outline-dark" id="modal_update_btn">更新</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- section02 變更密碼 UpdatePwdModal-->
+    <div class="modal fade" id="UpdatePwdModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header text-bg-dark">
+                    <h1 class="modal-title fs-5 text-center" id="exampleModalLabel">變更密碼</h1>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="timeline-section02 pb-4">
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-11">
+                                <div class="mb-2" id="pwd_mydata">
+                                    <label for="update_pwd" class="form-label">更新密碼 :</label>
+                                    <div class="input-group">
+                                        <input type="password" class="form-control" placeholder="" id="update_pwd"
+                                            name="update_pwd">
+
+                                        <button class="btn btn-outline-secondary" type="button" id="togglePassword_new">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <div class="valid-feedback">密碼符合規定</div>
+                                        <div class="invalid-feedback">密碼不符合規定</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary mt-3" data-bs-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-outline-dark mt-3" id="modal_update_pwd_btn">更新</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="../../js/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="../../js/bootstrap.bundle.min.js"></script>
+    <!-- 隱藏選單 AdminLTE App -->
+    <script src="../../js/bg/adminlte.min.js"></script>
+    <!-- fullCalendar 2.2.5 -->
+    <script src="../../js/bg/moment.min.js"></script>
+    <script src="../../js/bg/main.js"></script>
+    <!-- chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- sweetalert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        var u_id;
+        var radArray = [];
+        var update_pm;
+        var update_ll;
+        var add_pm = "1";
+        var add_ll;
+        var flag_add_account = false;
+        var flag_add_pwd = false;
+        var flag_add_re_pwd = false;
+        var flag_add_username = false;
+        var flag_add_nickname = false;
+        var flag_add_mobile = false;
+        var flag_add_email = false;
+        var flag_add_birthday = false;
+        var flag_add_address = false;
+        var flag_add_level = false;
+        var flag_username = true;
+        var flag_pwd = false;
+
+        $(function () {
+            if (getCookie != "UID01") {
+                // 判斷是否登入 UID01存在, 傳遞至後端api 判斷是否合法
+                var dataJSON = {};
+                dataJSON["UID01"] = getCookie("UID01");
+                console.log(JSON.stringify(dataJSON));
+
+                $.ajax({
+                    type: "POST",
+                    url: "../../api/common/project_Member_CheckUID_api.php",
+                    data: JSON.stringify(dataJSON),
+                    dataType: "json",
+                    success: showdata_Check_UID,
+                    error: function () {
+                        alert("error-../../api/common/project_Member_CheckUID_api.php");
+                    }
+                });
+            } else {
+                location.href = "../../project_index.html";
+            }
+
+            // 判定UID01是否相同, 是否保持登入
+            $(function () {
+                if (getCookie != "UID01") {
+                    // 將輸入資料轉成json檔
+                    var dataJSON = {};
+                    dataJSON["UID01"] = getCookie("UID01");
+                    console.log(JSON.stringify(dataJSON));
+
+                    // UID01存在, 傳遞至後端api判斷是否合法
+                    $.ajax({
+                        type: "POST",
+                        url: "../../api/common/project_Member_CheckUID_api.php",
+                        data: JSON.stringify(dataJSON),
+                        dataType: "json",
+                        success: showdata_Check_UID,
+                        error: function () {
+                            alert("Error-../../api/common/project_Member_CheckUID_api.php");
+                        }
+                    });
+                }
+            });
+
+            // 登出帳號 #logout_btn
+            $(function () {
+                $("#logout_btn").click(function () {
+                    if (confirm("確定是否登出？")) {
+                        // console.log("logout_ok_btn");
+                        // 更改UID01為""
+                        setCookie("UID01", "", 7);
+                        // 需使用套件，刪除UID01值
+                        // $.removeCookie('UID01', { path: '/' });
+                        alert("登出成功");
+                        location.href = "../../project_index.html";
+                    }
+                });
+            });
+
+            // 會員資料讀取
+            $.ajax({
+                type: "GET",
+                url: "../../api/back/project_bg_member_Read_api.php",
+                dataType: "json",
+                async: false,
+                success: showdata,
+                error: function () {
+                    alert("Error-../../api/back/project_bg_member_Read_api.php");
+                }
+            });
+
+            // 修改會員資料
+            $("body").on("click", "#mydata #update_btn", function () {
+                console.log("update_btn_ok");
+                console.log($(this).data("id"));
+                console.log($(this).data("account"));
+                console.log($(this).data("username"));
+                console.log($(this).data("nickname"));
+                console.log($(this).data("mobile"));
+                console.log($(this).data("email"));
+                console.log($(this).data("address"));
+                console.log($(this).data("gender"));
+                console.log($(this).data("permissions"));
+                console.log($(this).data("level"));
+
+                u_id = $(this).data("id");
+                $("#update_account").val($(this).data("account"));
+                $("#update_username").val($(this).data("username"));
+                $("#update_nickname").val($(this).data("nickname"));
+                $("#update_mobile").val($(this).data("mobile"));
+                $("#update_email").val($(this).data("email"));
+                $("#update_address").val($(this).data("address"));
+                radArray = $(this).data("gender") ? $(this).data("gender").split(", ") : [];
+                console.log(radArray);
+                $("#update_pm").val($(this).data("permissions"));
+                $("#update_level").val($(this).data("level"));
+                console.log($("#update_pm").val());
+
+                // 檢查權限 監聽 switch #update_pm
+                // 按修改鍵後，switch01.text顯示的資料
+                update_pm = $("#update_pm").val();
+                console.log(update_pm);
+                if (update_pm == "啟用") {
+                    $("#update_pm").prop('checked', true);
+                    $("#update_pm").next().text("啟用");
+                } else {
+                    $("#update_pm").prop('checked', false);
+                    $("#update_pm").next().text("停權");
+                }
+
+                // 監聽switch #update_pm
+                // 判定修改後的資料傳送到後端
+                $("#update_pm").change(function () {
+                    console.log($(this).is(':checked'));
+                    if ($(this).is(':checked')) {
+                        $(this).next().text("啟用");
+                        update_pm = "啟用";
+                    } else {
+                        $(this).next().text("停權");
+                        update_pm = "停權";
+                    }
+                });
+
+                // 檢查性別 監聽 radio #rad
+                console.log(radArray.length);
+                $("#radio_male").prop('checked', false);
+                $("#radio_female").prop('checked', false);
+                for (var i = 0; i < radArray.length; i++) {
+                    if (radArray[i] == "男性") {
+                        $("#radio_male").prop('checked', true);
+                        flag_gender = true;
+                    } else if (radArray[i] == "女性") {
+                        $("#radio_female").prop('checked', true);
+                        flag_gender = true;
+                    } else if (radArray[i] == "") {
+                        flag_gender = false;
+                    }
+                };
+
+                // 監聽_即時監聽 #Level
+                $('#update_level').bind("input propertychange", function () {
+                    console.log($(this).val());
+                    update_ll = $(this).val();
+                });
+            });
+
+            // 修改密碼
+            $("body").on("click", "#mydata #update_pwd_btn", function () {
+                console.log("update_btn_ok");
+                console.log($(this).data("id"));
+                console.log($(this).data("pwd"));
+                u_id = $(this).data("id");
+            });
+
+            // 檢查修改密碼 即時監聽 #re_pwd
+            $('#update_pwd').bind("input propertychange", function () {
+                console.log($(this).val().length);
+                if ($(this).val().length > 2 && $(this).val().length < 16) {
+                    // 字數符合規定
+                    $(this).removeClass("is-invalid");
+                    $(this).removeClass("is-valid");
+                    $(this).addClass("is-valid");
+                    flag_pwd = true;
+                } else {
+                    // 字數不符合規定
+                    $(this).removeClass("is-invalid");
+                    $(this).removeClass("is-valid");
+                    $(this).addClass("is-invalid");
+                    flag_pwd = false;
+                }
+            });
+
+            // modal更新密碼
+            $("#modal_update_pwd_btn").click(function () {
+                if (flag_pwd == true) {
+                    var dataJSON = {};
+                    dataJSON["ID"] = u_id;
+                    dataJSON["Pwd"] = $("#update_pwd").val();
+                    console.log(JSON.stringify(dataJSON));
+                    // 傳遞更新參數至後端api
+                    $.ajax({
+                        type: "POST",
+                        url: "../../api/back/project_bg_member_UpdatePwd_api.php",
+                        data: JSON.stringify(dataJSON),
+                        dataType: "json",
+                        success: showdata_update_pwd,
+                        error: function () {
+                            alert("Error-../../api/back/project_bg_member_UpdatePwd_api.php");
+                        }
+                    });
+                } else {
+                    alert("資料欄位填寫格式有誤!!");
+                    location.href = "../../web/back/project_bg_member_Read.html";
+                }
+            });
+
+            // modal更新會員資料
+            $("#modal_update_btn").click(function () {
+                var red_gender = [];
+                $.each($("input[name='rad']:checked"), function () {
+                    red_gender = $(this).val();
+                });
+
+                if (update_pm == "啟用") {
+                    update_pm = "1";
+                } else {
+                    update_pm = "0";
+                }
+
+                if (update_ll == "VIP會員") {
+                    update_ll = "90";
+                } else {
+                    update_ll = "100";
+                }
+
+                // if (flag_username == true && flag_nickname == true && flag_mobile == true && flag_email == true && flag_address == true) {
+                if (flag_username == true) {
+
+                    // 產生json格式的參數
+                    var dataJSON = {};
+                    dataJSON["ID"] = u_id;
+                    dataJSON["UserName"] = $("#update_username").val();
+                    dataJSON["NickName"] = $("#update_nickname").val();
+                    dataJSON["Gender"] = red_gender;
+                    dataJSON["Mobile"] = $("#update_mobile").val();
+                    dataJSON["Email"] = $("#update_email").val();
+                    dataJSON["Birthday"] = $("#update_birthday").val();
+                    dataJSON["Address"] = $("#update_address").val();
+                    dataJSON["Permissions"] = update_pm;
+                    dataJSON["Level"] = update_ll;
+
+                    console.log(JSON.stringify(dataJSON));
+
+                    // 傳遞更新參數至後端api
+                    $.ajax({
+                        type: "POST",
+                        url: "../../api/back/project_bg_member_Update_api.php",
+                        data: JSON.stringify(dataJSON),
+                        dataType: "json",
+                        success: showdata_update,
+                        error: function () {
+                            alert("Error-../../api/back/project_bg_member_Update_api.php");
+                        }
+                    });
+
+                } else {
+                    alert("資料欄位填寫格式有誤!!");
+                }
+            });
+
+        });
+
+        // 新增會員資料
+        $(function () {
+            // 註冊檢查帳號 即時監聽 #add_account
+            $('#add_account').bind("input propertychange", function () {
+                console.log($(this).val().length);
+                if ($(this).val().length > 3 && $(this).val().length < 11) {
+                    // 字數符合規定，傳遞至後端檢查帳號是否存在
+                    var dataJSON = {};
+                    dataJSON["Account"] = $("#add_account").val();
+                    console.log(JSON.stringify(dataJSON));
+
+                    // 取得後端資料執行檢查
+                    $.ajax({
+                        type: "POST",
+                        url: "../../api/common/project_CheckAccount_api.php",
+                        data: JSON.stringify(dataJSON),
+                        dataType: "json",
+                        success: showdata_CheckAccount,
+                        error: function () {
+                            alert("Error-../../api/common/project_CheckAccount_api.php");
+                        }
+                    });
+                } else {
+                    // 字數不符合規定
+                    $(this).removeClass("is-valid");
+                    $(this).removeClass("is-invalid");
+                    $(this).text("帳號不符合規定");
+                    $(this).addClass("is-invalid");
+                    flag_add_account = false;
+                }
+            });
+
+            // 註冊檢查姓名 即時監聽 #add_username
+            $('#add_username').bind("input propertychange", function () {
+                console.log($(this).val().length);
+                if ($(this).val().length > 1 && $(this).val().length < 11) {
+                    console.log("ok");
+                    // 字數符合規定
+                    $(this).removeClass("is-valid");
+                    $(this).removeClass("is-invalid");
+                    $(this).addClass("is-valid");
+                    flag_add_username = true;
+                } else {
+                    // 字數不符合規定
+                    $(this).removeClass("is-valid");
+                    $(this).removeClass("is-invalid");
+                    $(this).addClass("is-invalid");
+                    flag_add_username = false;
+                }
+            });
+
+            // 註冊檢查暱稱 即時監聽 #add_nickname
+            $('#add_nickname').bind("input propertychange", function () {
+                console.log($(this).val().length);
+                if ($(this).val().length > 2 && $(this).val().length < 16) {
+                    // 字數符合規定
+                    $(this).removeClass("is-invalid");
+                    $(this).removeClass("is-valid");
+                    $(this).addClass("is-valid");
+                    flag_add_nickname = true;
+                } else {
+                    // 字數不符合規定
+                    $(this).removeClass("is-invalid");
+                    $(this).removeClass("is-valid");
+                    $(this).addClass("is-invalid");
+                    flag_add_nickname = false;
+                }
+            });
+
+            // 註冊檢查地址 即時監聽 #add_address
+            $('#add_address').bind("input propertychange", function () {
+                console.log($(this).val().length);
+                if ($(this).val().length > 5 && $(this).val().length < 32) {
+                    console.log("ok");
+                    // 字數符合規定
+                    $(this).removeClass("is-valid");
+                    $(this).removeClass("is-invalid");
+                    $(this).addClass("is-valid");
+                    flag_add_address = true;
+                } else {
+                    // 字數不符合規定
+                    $(this).removeClass("is-valid");
+                    $(this).removeClass("is-invalid");
+                    $(this).addClass("is-invalid");
+                    flag_add_address = false;
+                }
+            });
+
+            // 註冊檢查密碼 即時監聽 #add_pwd
+            $('#add_pwd').bind("input propertychange", function () {
+                console.log($(this).val().length);
+                if ($(this).val().length > 2 && $(this).val().length < 16) {
+                    // 字數符合規定
+                    $(this).removeClass("is-invalid");
+                    $(this).removeClass("is-valid");
+                    $(this).addClass("is-valid");
+                    flag_add_pwd = true;
+                } else {
+                    // 字數不符合規定
+                    $(this).removeClass("is-invalid");
+                    $(this).removeClass("is-valid");
+                    $(this).addClass("is-invalid");
+                    flag_add_pwd = false;
+                }
+            });
+
+            // 註冊檢查二次密碼 即時監聽 #add_re_pwd
+            $('#add_re_pwd').bind("input propertychange", function () {
+                console.log($(this).val().length);
+                if ($(this).val() == $("#add_pwd").val()) {
+                    // 符合規定
+                    $(this).removeClass("is-invalid");
+                    $(this).addClass("is-valid");
+                    flag_add_re_pwd = true;
+                } else {
+                    // 不符合規定
+                    $(this).removeClass("is-valid");
+                    $(this).addClass("is-invalid");
+                    flag_add_re_pwd = false;
+                }
+            });
+
+            // 註冊檢查手機 即時監聽 #add_mobile
+            $('#add_mobile').bind("input propertychange", function () {
+                console.log($(this).val().length);
+                if ($(this).val().length == 10) {
+                    // 字數符合規定
+                    $(this).removeClass("is-invalid");
+                    $(this).addClass("is-valid");
+                    flag_add_mobile = true;
+                } else {
+                    // 字數不符合規定
+                    $(this).removeClass("is-valid");
+                    $(this).addClass("is-invalid");
+                    flag_add_mobile = false;
+                }
+            });
+
+            // 註冊檢查郵件 即時監聽 #add_email
+            $('#add_email').bind("input propertychange", function () {
+                console.log($(this).val().length);
+                if ($(this).val().length > 3 && $(this).val().length < 30) {
+                    // 字數符合規定
+                    $(this).removeClass("is-invalid");
+                    $(this).addClass("is-valid");
+                    flag_add_email = true;
+                } else {
+                    // 字數不符合規定
+                    $(this).removeClass("is-valid");
+                    $(this).addClass("is-invalid");
+                    flag_add_email = false;
+                }
+            });
+
+            // 註冊檢查會員等級 即時監聽 #add_level
+            $('#add_level').bind("input propertychange", function () {
+                console.log($(this).val());
+                if ($(this).val() != "") {
+                    // 已選擇
+                    $(this).removeClass("is-invalid");
+                    $(this).addClass("is-valid");
+                    console.log($(this).val());
+                    if ($(this).val() == "VIP會員") {
+                        add_ll = "90";
+                        console.log(add_ll);
+                    } else {
+                        add_ll = "100";
+                        console.log(add_ll);
+                    }
+                    flag_add_level = true;
+                }
+            });
+
+            // 註冊檢查會員權限 即時監聽 #add_permissions
+            $("#add_pm").change(function () {
+                console.log($(this).is(':checked'));
+                if ($(this).is(':checked')) {
+                    $(this).next().text("啟用");
+                    add_pm = "1";
+                    console.log(add_pm);
+                } else {
+                    $(this).next().text("停權");
+                    add_pm = "0";
+                    console.log(add_pm);
+                }
+            });
+
+            // 監聽按鈕"新增" #modal_add_btn
+            $('#modal_add_btn').click(function () {
+                // 註冊檢查性別 即時監聽 #add_gender
+                var rad_gender;
+                $.each($("input[name='rad_add']:checked"), function () {
+                    rad_gender = $(this).val();
+                });
+                console.log(rad_gender);
+
+                if (flag_add_account && flag_add_pwd && flag_add_re_pwd && flag_add_username && flag_add_nickname && flag_add_mobile && flag_add_email && flag_add_address && flag_add_level) {
+
+                    var dataJSON = {};
+                    dataJSON["Account"] = $("#add_account").val();
+                    dataJSON["Pwd"] = $("#add_pwd").val();
+                    dataJSON["UserName"] = $("#add_username").val();
+                    dataJSON["NickName"] = $("#add_nickname").val();
+                    dataJSON["Gender"] = rad_gender;
+                    dataJSON["Mobile"] = $("#add_mobile").val();
+                    dataJSON["Email"] = $("#add_email").val();
+                    dataJSON["Address"] = $("#add_address").val();
+                    dataJSON["Level"] = add_ll
+                    dataJSON["Permissions"] = add_pm;
+
+                    console.log(JSON.stringify(dataJSON));
+
+                    // 傳遞至後端
+                    $.ajax({
+                        type: "POST",
+                        url: "../../api/back/project_bg_member_Read_Create_api.php",
+                        data: JSON.stringify(dataJSON),
+                        contentType: "application/json;charset=utf-8",
+                        dataType: "json",
+                        success: showdata_add,
+                        error: function () {
+                            alert("error-../../api/back/project_bg_member_Read_Create_api.php");
+                        }
+                    });
+                } else {
+                    alert("欄位有誤，請修正!!");
+                    console.log(flag_add_account);
+                    console.log(flag_add_pwd);
+                    console.log(flag_add_re_pwd);
+                    console.log(flag_add_username);
+                    console.log(flag_add_nickname);
+                    console.log(flag_add_mobile);
+                    console.log(flag_add_email);
+                    console.log(flag_add_address);
+                    console.log(flag_add_level);
+                }
+
+            });
+
+        });
+
+        // 刪除會員資料
+        $(function () {
+            // 單選取查ID
+            $("#mydata #delete_choose02").change(function () {
+                console.log($(this).data("id"));
+            })
+
+            // 全部選取
+            $("#delete_choose01").change(function () {
+                // 獲取全選複選框的狀態
+                var isChecked = $(this).prop("checked");
+
+                // 將所有其他複選框的狀態設置為與全選複選框相同
+                $("input[name='delete_choose']").prop("checked", isChecked);
+            });
+
+            $("body").on("click", "#delete_btn", function () {
+
+                var chkArray = [];
+                $.each($("input[name='delete_choose']:checked"), function () {
+                    console.log($(this).data("id"));
+                    chkArray.push($(this).data("id"));
+                });
+                console.log(chkArray);
+                if (confirm("確定要刪除此筆會員資料嗎？")) {
+                    var dataJSON = {};
+                    dataJSON["ID"] = chkArray.join(", ");
+                    console.log(JSON.stringify(dataJSON));
+                    // 傳遞至後端
+                    $.ajax({
+                        type: "POST",
+                        url: "../../api/back/project_bg_member_Delete_api.php",
+                        data: JSON.stringify(dataJSON),
+                        dataType: "json",
+                        success: showdata_delete,
+                        error: function () {
+                            alert("Error-../../api/back/project_bg_member_Delete_api.php");
+                        }
+                    });
+                }
+            });
+        });
+
+        // 檢查UID 是否可保持繼續登入
+        function showdata_Check_UID(data) {
+            console.log(data);
+
+            if (data.state) {
+                // console.log(data.data[0].UID01);
+                setCookie("UID01", data.data[0].UID01, 7);
+                // 驗證成功
+                if (data.data[0].Level != 90 && data.data[0].Level != 100) {
+                    if (data.data[0].Permissions == 1) {
+                        // 顯示使用者
+                        $("#user_message").removeClass("d-none");
+                        $("#user_message").addClass("ms-3");
+                        $("#user_message").text(data.data[0].UserName + " 早安~!!");
+                    } else {
+                        location.href = "../../project_index.html";
+                    }
+                } else {
+                    location.href = "../../project_index.html";
+                    // setCookie("UID01", "", 7);
+                }
+            } else {
+                location.href = "../../project_index.html";
+            }
+        }
+
+        // 註冊檢查帳號 是否重複
+        function showdata_CheckAccount(data) {
+            console.log(data);
+            if (data.state) {
+                // 帳號不存在，可以使用
+                $("#add_account").removeClass("is-invalid");
+                $("#add_account").removeClass("is-valid");
+                $("#add_account_ok").text("帳號不存在，可以使用");
+                $("#add_account").addClass("is-valid");
+                flag_add_account = true;
+            }
+            else {
+                // 帳號已存在，不可以使用
+                $("#add_account").removeClass("is-valid");
+                $("#add_account").removeClass("is-invalid");
+                $("#add_account_no").text("帳號已存在，不可以使用");
+                $("#add_account").addClass("is-invalid");
+                flag_add_account = false;
+            }
+        }
+
+        // 註冊會員
+        function showdata_add(data) {
+            console.log(data);
+            if (data.state) {
+                alert(data.message);
+                location.href = "../../web/back/project_bg_member_Read.html";
+            } else {
+                alert(data.message);
+            }
+        }
+
+        // 讀取會員資料
+        function showdata(data) {
+            console.log(data);
+            $("#mydata").empty();
+            data.data.forEach(function (item) {
+                for (var Permissions in item) {
+                    if (item[Permissions] == 1) {
+                        item[Permissions] = '啟用';
+                    }
+
+                    if (item[Permissions] == "0") {
+                        item[Permissions] = '停權';
+                    }
+                }
+
+                for (var Level in item) {
+                    if (item[Level] == 90) {
+                        item[Level] = 'VIP會員';
+                    }
+
+                    if (item[Level] == 100) {
+                        item[Level] = '一般會員';
+                    }
+                }
+
+                var strHTML =
+                    '<tr>' +
+                    '<td style="vertical-align: middle;"><a href="#" id="update_pwd_btn" data-bs-toggle="modal" data-bs-target="#UpdatePwdModal" data-id="' + item.ID + '" data-pwd="' + item.Pwd + '">' + item.Account + '</a></td>' +
+                    '<td style="vertical-align: middle;">' + item.UserName + '</td>' +
+                    '<td style="vertical-align: middle;">' + item.Level + '</td>' +
+                    '<td style="vertical-align: middle;">' + item.Permissions + '</td>' +
+                    '<td style="vertical-align: middle;">' +
+                    '<p class="my-0">' + item.Update_at + '</p>' +
+                    '</td>' +
+                    '<td style="vertical-align: middle;">' +
+                    '<p class="my-0">' + item.Created_at + '</p>' +
+                    '</td>' +
+                    '<td style="vertical-align: middle;">' +
+                    '<button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#UpdateModal" data-id="' + item.ID + '" data-photo="xx" data-username="' + item.UserName + '" data-nickname="' + item.NickName + '" data-gender="' + item.Gender + '" data-mobile="' + item.Mobile + '" data-email="' + item.Email + '" data-birthday="xx" data-address="' + item.Address + '" data-account="' + item.Account + '" data-level="' + item.Level + '" data-permissions="' + item.Permissions + '" id="update_btn">修改</button>' +
+                    '</td>' +
+                    '<td style="vertical-align: middle;">' +
+                    '<div class="form-check form-check-inline">' +
+                    '<input type="checkbox" class="mt-1 ms-auto form-check-input" name="delete_choose" id="delete_choose02" data-id="' + item.ID + '">' +
+                    '<label for="delete_choose02" class="form-check-label"></label>' +
+                    '</div>' +
+                    '</td>' +
+                    '</tr>';
+                $("#mydata").append(strHTML);
+            });
+        }
+
+        // 更新會員資料
+        function showdata_update(data) {
+            console.log(data);
+            if (data.state) {
+                alert(data.message);
+                location.href = "../../web/back/project_bg_member_Read.html";
+            } else {
+                alert(data.message);
+                console.log(data);
+            }
+        }
+
+        // 更新密碼
+        function showdata_update_pwd(data) {
+            console.log(data);
+            if (data.state) {
+                alert(data.message);
+                location.href = "../../web/back/project_bg_member_Read.html";
+            } else {
+                alert(data.message);
+                location.href = "../../web/back/project_bg_member_Read.html";
+            }
+        }
+
+        // 密碼顯示 new
+        document.getElementById('togglePassword_new').addEventListener('click', function () {
+            var update_pwd = document.getElementById('update_pwd');
+            var icon = this.querySelector('i');
+
+            // 如果输入框的类型是密码，则切换为文本，否则切换为密码
+            if (update_pwd.type === 'password') {
+                update_pwd.type = 'text';
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            } else {
+                update_pwd.type = 'password';
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            }
+        });
+
+        // 刪除會員資料
+        function showdata_delete(data) {
+            console.log(data);
+            if (data.state) {
+                alert(data.message);
+                location.href = "../../web/back/project_bg_member_Read.html";
+            } else {
+                alert(data.message);
+            }
+        }
+
+        // w3s setCookie
+        function setCookie(cname, cvalue, exdays) {
+            const d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            let expires = "expires=" + d.toUTCString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+
+        // w3s getCookie
+        function getCookie(cname) {
+            let name = cname + "=";
+            let decodedCookie = decodeURIComponent(document.cookie);
+            let ca = decodedCookie.split(';');
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+    </script>
+</body>
+
+</html>
