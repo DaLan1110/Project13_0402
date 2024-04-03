@@ -5,21 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>首頁</title>
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/all.min.css">
     <!-- s01 -->
-    <link rel="stylesheet" href="./css/project_index_s01.css">
+    <link rel="stylesheet" href="../css/project_index_s01.css">
     <!-- s02 -->
-    <link rel="stylesheet" href="./css/project_index_s02.css">
+    <link rel="stylesheet" href="../css/project_index_s02.css">
     <!-- s04 -->
-    <link rel="stylesheet" href="./css/project_index_s04.css">
+    <link rel="stylesheet" href="../css/project_index_s04.css">
     <!-- s05 -->
-    <link rel="stylesheet" href="./css/project_index_s05.css">
+    <link rel="stylesheet" href="../css/project_index_s05.css">
     <!-- s06 -->
-    <link rel="stylesheet" href="./css/project_index_s06.css">
+    <link rel="stylesheet" href="../css/project_index_s06.css">
     <!-- s07 -->
-    <link rel="stylesheet" href="./css/project_index_s07.css">
-    <link rel="stylesheet" href="./css/myall.css">
+    <link rel="stylesheet" href="../css/project_index_s07.css">
+    <link rel="stylesheet" href="../css/myall.css">
     <style>
         .more:hover{
             color: var(--mycolor02);
@@ -49,7 +49,7 @@
                                 id="loginmodal"><i class="fa-solid fa-pen p-1"></i>會員登入</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link fw-700 d-none" href="../../2024/project13/project_bg_index.html"
+                            <a class="nav-link fw-700 d-none" href="../web/back/project_bg_index.html"
                                 id="backstage_btn"><i class="fa-solid fa-gear p-1"></i>後臺管理</a>
                         </li>
                         <li class="nav-item">
@@ -65,7 +65,7 @@
                             </a>
                             <ul class="dropdown-menu dropdown-menu-start">
                                 <li><a class="dropdown-item"
-                                        href="../../2024/project13/project_MemberCenter_Read.html">會員中心</a>
+                                        href="../web/front/project_MemberCenter_Read.html">會員中心</a>
                                 </li>
                                 <li>
                                     <hr class="dropdown-divider">
@@ -360,7 +360,7 @@
             </div>
             <div class="d-flex align-items-center justify-content-end">
                 <span class="fw-600 me-3" style="color: var(--mycolor23);">VIP會員享8折優惠</span>
-                <button type="button" class="btn btn-outline-dark px-3 fw-800 rounded-5"><a href="../../2024/project13/project_product_list.html" style="text-decoration: none; color: var(--mycolor01);" class="more">more</a><i
+                <button type="button" class="btn btn-outline-dark px-3 fw-800 rounded-5"><a href="../web/front/project_product_list.html" style="text-decoration: none; color: var(--mycolor01);" class="more">more</a><i
                         class="fa-solid fa-arrow-right ms-2"></i>
                 </button>
             </div>
@@ -573,10 +573,10 @@
         </div>
     </section>
 
-    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
     <!-- 數字動畫 -->
     <script src="https://unpkg.com/counterup2@2.0.2/dist/index.js">	</script>
-    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="../js/jquery-3.7.1.min.js"></script>
     <script>
         // 數字動畫
         const counterUp = window.counterUp.default
@@ -623,12 +623,12 @@
                 // UID01存在, 傳遞至後端api判斷是否合法
                 $.ajax({
                     type: "POST",
-                    url: "../../2024/project13/project_Member_CheckUID_api.php",
+                    url: "../api/common/project_Member_CheckUID_api.php",
                     data: JSON.stringify(dataJSON),
                     dataType: "json",
                     success: showdata_Check_UID,
                     error: function () {
-                        alert("Error-../../2024/project13/project_Member_CheckUID_api.php");
+                        alert("Error-../api/common/project_Member_CheckUID_api.php");
                     }
                 });
             }
@@ -648,12 +648,12 @@
                     // 取得後端資料執行檢查
                     $.ajax({
                         type: "POST",
-                        url: "../../2024/project13/project_CheckAccount_api.php",
+                        url: "../api/common/project_CheckAccount_api.php",
                         data: JSON.stringify(dataJSON),
                         dataType: "json",
                         success: showdata_CheckAccount,
                         error: function () {
-                            alert("Error-../../2024/project13/project_CheckAccount_api.php");
+                            alert("Error-../api/common/project_CheckAccount_api.php");
                         }
                     });
                 } else {
@@ -776,12 +776,12 @@
                     // 傳遞至後端執行註冊行為
                     $.ajax({
                         type: "POST",
-                        url: "../../2024/project13/project_CreateMember_api.php",
+                        url: "../api/common/project_CreateMember_api.php",
                         data: JSON.stringify(dataJSON),
                         dataType: "json",
                         success: showdata_registermodal,
                         error: function () {
-                            alert("Error-../../2024/project13/project_CreateMember_api.php");
+                            alert("Error-../api/common/project_CreateMember_api.php");
                         }
                     });
                 } else {
@@ -804,12 +804,12 @@
                 // 傳遞至後端執行登入行為
                 $.ajax({
                     type: "POST",
-                    url: "../../2024/project13/project_Login_api.php",
+                    url: "../api/common/project_Login_api.php",
                     data: JSON.stringify(dataJSON),
                     dataType: "json",
                     success: showdata_loginmodal,
                     error: function () {
-                        alert("Error-../../2024/project13/project_Login_api.php");
+                        alert("Error-../api/common/project_Login_api.php");
                     }
                 });
             });
@@ -825,7 +825,7 @@
                     // 需使用套件，刪除UID01值
                     // $.removeCookie('UID01', { path: '/' });
                     alert("登出成功");
-                    location.href = "../../2024/project13/project_index.html";
+                    location.href = "../project_index.html";
                 }
             });
         });
@@ -856,7 +856,7 @@
             console.log(data);
             if (data.state) {
                 alert(data.message);
-                location.href = "../../2024/project13/project_index.html";
+                location.href = "../project_index.html";
             } else {
                 alert(data.message);
             }
@@ -887,11 +887,11 @@
                     }
                 } else {
                     alert("已限制權限，請通知管理員!!");
-                    location.href = "../../2024/project13/project_index.html";
+                    location.href = "../project_index.html";
                 }
             } else {
                 alert(data.message);
-                location.href = "../../2024/project13/project_index.html";
+                location.href = "../project_index.html";
             }
 
         }
